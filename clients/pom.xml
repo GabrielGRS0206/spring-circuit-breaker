@@ -9,10 +9,10 @@
 		<version>2.4.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.notifications</groupId>
-	<artifactId>notifications</artifactId>
+	<groupId>br.com.clients</groupId>
+	<artifactId>clients</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>notifications</name>
+	<name>clients</name>
 	<description>Api Circuit Breaker</description>
 	<properties>
 		<java.version>11</java.version>
