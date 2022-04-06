@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -23,20 +24,21 @@ public class Notification {
 	@Column(nullable = false)
 	private Long clientId;
 
+	@NotNull
 	private String status;
 
+	@NotNull
 	@NotBlank
-	@Lob
-	private String notification;
+	private String message;
 
 	public Notification() {
 		super();
 	}
 
-	public Notification(Long id, Long clientId, String status, String notification) {
+	public Notification(Long id, Long clientId, String status, String message) {
 		this.id = id;
 		this.clientId = clientId;
 		this.status = status;
-		this.notification = notification;
+		this.message = message;
 	}
 }

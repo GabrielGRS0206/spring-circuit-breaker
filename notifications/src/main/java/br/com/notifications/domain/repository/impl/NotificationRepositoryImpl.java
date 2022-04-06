@@ -31,7 +31,7 @@ public class NotificationRepositoryImpl implements NotificationsRepositotyQuerie
 			new Notification(rs.getLong("id"),
 							rs.getLong("client_id"), 
 							rs.getString("status"),
-							rs.getString("notification")));
+							rs.getString("message")));
 		} catch (Exception e) {
 			LOGGER.error("Error search", e.getCause(), e.getMessage());
 		} finally {
