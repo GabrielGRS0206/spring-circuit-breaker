@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.notifications.api.model.dto.NotificationResponseDto;
@@ -24,10 +24,7 @@ public class NotificationController {
 	private NotificationMapper mapper;
 	
 	@GetMapping
-	public List<NotificationResponseDto> findAllClientNotifications(@PathVariable String id){
-		return service.findAllClientNotification(id)
-				.stream()
-				.map(e -> mapper.toEntity(e))
-				.collect(Collectors.toList());
+	public List<NotificationResponseDto> findAllClientNotifications(@RequestParam Long id){
+		return mapper.toDto(service.findAllClientNotification(id));
 	}
 }

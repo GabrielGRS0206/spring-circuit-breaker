@@ -1,4 +1,6 @@
-package br.com.notifications.domain.model;
+package br.com.notifications.api.model.vo;
+
+import java.time.LocalDate;
 
 import lombok.Data;
 
@@ -7,4 +9,5 @@ public class NotificationsVO {
 
 	private String type;
 	private String description;
+	private LocalDate date;
 }
