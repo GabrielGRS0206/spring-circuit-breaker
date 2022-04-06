@@ -9,10 +9,10 @@
 		<version>2.4.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.clients</groupId>
-	<artifactId>clients</artifactId>
+	<groupId>br.com.notifications</groupId>
+	<artifactId>notifications</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>clients</name>
+	<name>notifications</name>
 	<description>Api Circuit Breaker</description>
 	<properties>
 		<java.version>11</java.version>
@@ -94,6 +94,18 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.12.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
 		</dependency>
 	</dependencies>
 
