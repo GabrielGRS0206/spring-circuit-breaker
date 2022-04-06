@@ -18,7 +18,7 @@ public class ClientController extends BaseController {
 
 	@Autowired
 	private ClienteServiceBFF service;
-
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> findById(@PathVariable Long id) {
 		return ok(service.findById(id));
