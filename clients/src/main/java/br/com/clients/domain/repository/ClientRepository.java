@@ -1,9 +1,11 @@
 package br.com.clients.domain.repository;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.clients.domain.model.Client;
 
-public interface ClientRepository extends MongoRepository<Client, String>{
+@Repository
+public interface ClientRepository extends JpaRepository<Client, Long> {
 
 }
