@@ -61,6 +61,7 @@ public class NotificationsClientImpl implements NotificationsClient{
 	}
 	
 	public List<NotificationResponseDto> findByIdNotificationsClientCache(Long id, Throwable e) {
+		LOGGER.info(" CACHE -->> Client id = "+id);
 		return CACHE.getOrDefault(id, new ArrayList<NotificationResponseDto>());
 	}
 }
